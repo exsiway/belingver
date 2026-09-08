@@ -133,6 +133,19 @@ its issuer (`sk-ant-`, `sk-or-`, `gsk_`, `xai-`, `AIza`, `inf_`) is checked
 with that issuer alone. A key whose prefix several providers share (`sk-…`) is
 sent to nobody until you name the issuer in the popup.
 
+**Where to get a key.** Any of the eleven works; three are marketplaces that
+sell many models under one key, pay-as-you-go, with prices the popup shows
+per thousand theses:
+
+- [OpenRouter](https://openrouter.ai/keys): hundreds of models, one key
+  (`sk-or-…`), card or crypto top-up.
+- [Nous Research](https://portal.nousresearch.com/): the Nous inference
+  portal, open models at low prices.
+- [Surplus Intelligence](https://www.surplusintelligence.ai/): an open market
+  for inference on Base, the cheapest offer for each model (`inf_…` keys).
+
+A few dollars translate thousands of theses on a small model.
+
 Adding a provider is one entry in `PROVIDERS` in `src/shared/llm.js` and, if
 its prefix is distinctive, one line in `candidatesForKey`.
 
