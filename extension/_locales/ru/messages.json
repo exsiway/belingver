@@ -1,0 +1,8 @@
+{
+  "extName": {
+    "message": "Belingver"
+  },
+  "extDesc": {
+    "message": "Переводит тезисы на fomo.family и pump.fun прямо на странице, вашим ключом LLM."
+  }
+}

@@ -1,0 +1,108 @@
+// Português.
+export default {
+  // ------------------------------------------------- popup: chrome
+  'reload.banner': 'A aba está rodando uma versão antiga da extensão.',
+  'reload.button': 'Recarregar aba',
+  'reload.working': 'recarregando…',
+  'perm.banner': 'O Chrome retirou à extensão o acesso a um site de que precisa (fomo.family, pump.fun ou o seu fornecedor de tradução). As traduções falham com “Failed to fetch” até ser restaurado.',
+  'perm.restore': 'Restaurar acesso',
+
+  // ---------------------------------------------- popup: translate
+  'translate.toggle': 'Traduzir teses em tempo real',
+  'translate.provider': 'Provedor',
+  'translate.provider.help': 'De onde vêm as traduções: sua própria chave de LLM. As requisições vão direto do seu navegador ao provedor cuja chave você colou; nada passa por mais ninguém. Você paga só a esse provedor.',
+  'translate.apiKey': 'Chave de API',
+  'translate.apiKey.placeholder': 'Cole sua chave de API',
+  'translate.apiKey.help': 'Cole a chave do provedor, o resto é resolvido automaticamente: Anthropic, OpenAI, OpenRouter, Groq, DeepSeek, Gemini, Mistral, xAI, Together, Nous, Surplus. A chave fica só neste navegador e é enviada apenas a esse provedor.',
+  'translate.detecting': 'detectando o provedor pela chave…',
+  'translate.noPermission': 'o acesso a {origin} não foi concedido, sem ele a chave não pode ser verificada e nada é traduzido',
+  'translate.pickProvider': 'Que fornecedor emitiu esta chave? O prefixo é partilhado por vários; a chave não é enviada a ninguém até indicar.',
+  'translate.pickProvider.go': 'Usar',
+  'provider.working': 'A funcionar · {label}',
+  'provider.broken': 'Não funciona: {reason}',
+  'translate.model': 'Modelo',
+  'translate.targetLang': 'Traduzir para',
+  'translate.composeLang': 'Traduzir minhas teses para',
+  'translate.compose.help': 'Um botão aparece sob o campo “Write a thesis” no FOMO. Ao clicar, o texto do campo é traduzido para este idioma; você revisa e publica.\n\nCusta o mesmo que traduzir uma tese.',
+  'translate.catalog.loading': 'carregando catálogo…',
+  'translate.catalog.empty': 'cole uma chave para carregar os modelos',
+  'translate.perThousand': '{name} · ${price} por 1K teses',
+  'translate.clearCache': 'Limpar cache',
+  'translate.cacheCleared': 'cache de traduções limpo',
+  'translate.test': 'Testar tradução',
+  'translate.testing': 'consultando o provedor…',
+  'translate.test.noReason': 'motivo não informado',
+
+  // ------------------------------------------------- popup: errors
+  'err.noTab': 'nenhuma aba de fomo.family ou pump.fun encontrada. Ativa agora: {url}',
+  'err.unknown': 'desconhecida',
+  'err.oldTab': 'a aba roda uma versão antiga da extensão, recarregue com o botão acima e tente de novo',
+
+  // ------------------------------------------------------- compose
+  'compose.button': 'Traduzir tese → {lang}',
+  'compose.empty': 'Escreva uma tese primeiro',
+  'compose.working': 'Traduzindo…',
+  'compose.noText': 'o modelo não retornou tradução',
+  'compose.done': 'Traduzido, revise e publique',
+  'compose.failed': 'Falhou: {error}',
+
+  // ----------------------------------------------------- translate
+  'tr.rateLimited': 'o serviço pede para esperar, as traduções continuam em alguns segundos',
+  'tr.noBridge': 'a ponte com o service worker não está ativa',
+
+  // ---------------------------------------------------- background
+  'bg.unknownCommand': 'comando desconhecido: {type}',
+
+  // ------------------------------------------------- llm (own key)
+  'llm.pasteKey': 'cole a chave de API do provedor',
+  'llm.rejected': 'chave não aceita, tentamos {tried}',
+  'llm.rejectedHttp': 'chave não aceita (HTTP {status})',
+  'llm.emptyCatalog': 'catálogo vazio',
+  'llm.notJson': 'o provedor respondeu algo que não é JSON (HTTP {status}): {raw}',
+  'llm.http': 'o provedor retornou HTTP {status}: {detail}',
+  'llm.noKey': 'nenhuma chave de API definida, cole uma no popup do Belingver',
+  'llm.noModel': 'nenhum modelo escolhido',
+  'llm.noEndpoint': 'endpoint do provedor não definido',
+  'llm.emptyText': 'texto vazio',
+  'llm.emptyAnswer': 'resposta vazia do modelo',
+  'llm.badFormat': 'formato de corpo desconhecido: {format}',
+  'llm.headerNoColon': 'cabeçalho sem dois-pontos: "{line}"',
+  'llm.noKeyOrNone': 'nenhuma chave de API definida (ou escolha “sem autorização”)',
+
+  // ------------------------------------------------- popup: footer
+  'footer.privacy': 'Política de privacidade',
+  'footer.source': 'Código-fonte',
+  'footer.by': 'por',
+
+  // ------------------------------------------------- errors and reasons
+  'translate.toggle.help': 'Ligado: as teses na tela e as duas telas abaixo são enviadas ao seu fornecedor conforme você rola e substituídas no lugar. Desligado: nada sai do navegador por conta própria; o botão de traduzir a sua tese e o teste abaixo continuam funcionando quando você os pressiona.',
+  'translate.removeKey': 'Remover chave',
+  'translate.keyRemoved': 'chave removida, o acesso ao fornecedor foi devolvido ao Chrome',
+  'compose.changed': 'O texto mudou durante a tradução, nada foi substituído',
+  'tr.err.off': 'a tradução está desligada',
+  'tr.err.no-key': 'nenhuma chave de API definida',
+  'tr.err.empty': 'texto vazio',
+  'tr.err.too-long': 'o texto é mais longo do que uma tese pode ser',
+  'tr.err.http': 'o fornecedor respondeu HTTP {status}',
+  'tr.err.rate-limited': 'o fornecedor pede para esperar (limite de requisições)',
+  'tr.err.local-rate': 'traduções demais em um minuto, aguardando',
+  'tr.err.network': 'não foi possível alcançar o fornecedor',
+  'tr.err.timeout': 'o fornecedor não respondeu a tempo',
+  'tr.err.no-permission': 'o Chrome não concedeu acesso ao fornecedor',
+  'tr.err.bad-endpoint': 'as configurações do fornecedor não são utilizáveis, cole a chave de novo',
+  'tr.err.not-json': 'o fornecedor respondeu com algo que não é uma tradução',
+  'tr.err.too-large': 'o fornecedor respondeu com mais do que uma tradução',
+  'tr.err.rejected': 'a chave não foi aceita',
+  'tr.err.generic': 'a tradução falhou',
+  'llm.off': 'a tradução está desligada no popup da extensão',
+  'llm.tooLong': 'o texto tem mais de {max} caracteres',
+  'llm.tooLarge': 'o fornecedor respondeu com mais dados do que uma tradução',
+  'llm.localRate': 'mais de {max} traduções em um minuto, aguardando',
+  'llm.badEndpoint': 'as configurações do fornecedor não batem com a tabela de fornecedores, cole a chave de novo',
+  'llm.network': 'não foi possível alcançar o fornecedor: {detail}',
+  'llm.timeout': 'o fornecedor não respondeu a tempo',
+  'tr.reason.refusal': 'o modelo recusou traduzir isto',
+  'tr.reason.content-filter': 'o filtro de conteúdo do fornecedor barrou isto',
+  'tr.reason.truncated': 'o modelo ficou sem espaço antes de responder',
+  'tr.reason.empty': 'o modelo não devolveu tradução',
+};

@@ -1,0 +1,30 @@
+{
+  "name": "belingver",
+  "version": "0.2.4",
+  "private": true,
+  "type": "module",
+  "description": "Live thesis translation for FOMO (fomo.family) with your own LLM key. Chrome extension, runs entirely in your browser.",
+  "keywords": [
+    "chrome-extension",
+    "fomo",
+    "translation",
+    "llm"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "watch": "node build.mjs --watch",
+    "test": "node --test \"test/**/*.test.mjs\"",
+    "pack:store": "node scripts/pack-store.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exsiway/belingver"
+  }
+}

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Belingver</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <canvas id="space" class="space" aria-hidden="true"></canvas>
+  <div class="planet" aria-hidden="true"></div>
+  <header>
+    <div class="brand">
+      <img class="brand-logo" src="../brand.png" alt="Belingver" width="162" height="36" />
+      <select id="uiLang" class="lang" aria-label="Language"></select>
+    </div>
+    <div id="reload-banner" class="banner" hidden>
+      <span data-i18n="reload.banner">The tab is running an old version of the extension.</span>
+      <button id="reload-tab" class="lc-btn" data-i18n="reload.button">Reload tab</button>
+    </div>
+    <div id="perm-banner" class="banner" hidden>
+      <span data-i18n="perm.banner">Chrome has withdrawn the extension's access to a site it needs. Translations fail until it is restored.</span>
+      <button id="perm-restore" class="lc-btn" data-i18n="perm.restore">Restore access</button>
+    </div>
+  </header>
+
+  <div class="panel">
+    <section class="lc-card">
+      <div class="switch-row">
+        <span class="switch-text"><span data-i18n="translate.toggle">Translate theses on the fly</span> <span id="toggle-help"></span></span>
+        <label class="switch-label">
+          <input type="checkbox" id="translateEnabled" class="switch-input" />
+          <span class="switch" aria-hidden="true"><span class="switch-thumb"></span></span>
+        </label>
+      </div>
+    </section>
+
+    <section class="lc-card">
+      <h2><span data-i18n="translate.provider">Provider</span> <span id="provider-help"></span></h2>
+      <label class="field">
+        <span><span data-i18n="translate.apiKey">API key</span> <span id="apikey-help"></span> <button id="forgetKey" class="lc-link" type="button" hidden data-i18n="translate.removeKey">Remove key</button></span>
+        <input type="password" id="apiKey" data-i18n-placeholder="translate.apiKey.placeholder" spellcheck="false" autocomplete="off" />
+      </label>
+      <!-- One lamp for the whole translation path: green “Working · provider”
+           when the key is accepted and theses translate, red with the reason
+           when the provider or the feed fails. The test button reports here. -->
+      <div id="provider-info" class="ready-line" hidden></div>
+      <!-- A key whose prefix several providers share (sk-…) is sent to
+           nobody until the person names the issuer here. -->
+      <label class="field" id="provider-pick" hidden>
+        <span data-i18n="translate.pickProvider">Which provider issued this key?</span>
+        <div class="row">
+          <select id="providerPick"></select>
+          <button id="providerPickGo" class="lc-btn" type="button" data-i18n="translate.pickProvider.go">Use it</button>
+        </div>
+      </label>
+
+      <label class="field">
+        <span data-i18n="translate.model">Model</span>
+        <select id="model"></select>
+      </label>
+      <label class="field">
+        <span data-i18n="translate.targetLang">Translate into</span>
+        <select id="targetLang"></select>
+      </label>
+      <label class="field">
+        <span><span data-i18n="translate.composeLang">Translate my theses into</span> <span id="compose-help"></span></span>
+        <select id="composeLang"></select>
+      </label>
+      <div class="row">
+        <button id="test" class="lc-btn primary" data-i18n="translate.test">Test translation</button>
+        <button id="clear-cache" class="lc-btn" data-i18n="translate.clearCache">Clear cache</button>
+      </div>
+      <div id="test-info" class="detail"></div>
+    </section>
+    <footer class="foot">
+      <a class="link" href="https://github.com/exsiway/belingver/blob/main/docs/PRIVACY.md" target="_blank" rel="noopener" data-i18n="footer.privacy">Privacy policy</a>
+      <span class="sep" aria-hidden="true">|</span>
+      <a class="link" href="https://github.com/exsiway/belingver" target="_blank" rel="noopener" data-i18n="footer.source">Source</a>
+      <span class="sep" aria-hidden="true">|</span>
+      <span><span data-i18n="footer.by">by</span> <a class="link" href="https://x.com/exsiway_" target="_blank" rel="noopener">@exsiway_</a></span>
+    </footer>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

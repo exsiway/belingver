@@ -1,0 +1,22 @@
+# Every push and pull request: the tests, a clean build and a store package
+# from that exact commit, with the hashes in the log. A release is whatever
+# this job produced for the tagged commit, not a zip from someone's laptop.
+name: ci
+on:
+  push:
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --ignore-scripts
+      - run: npm test
+      - run: npm run pack:store
+      - uses: actions/upload-artifact@v4
+        with:
+          name: belingver-${{ github.sha }}
+          path: release/*.zip

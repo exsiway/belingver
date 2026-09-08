@@ -1,0 +1,108 @@
+// 한국어.
+export default {
+  // ------------------------------------------------- popup: chrome
+  'reload.banner': '탭이 이전 버전의 확장 프로그램으로 실행 중입니다.',
+  'reload.button': '탭 새로고침',
+  'reload.working': '새로고침 중…',
+  'perm.banner': 'Chrome가 확장 프로그램에 필요한 사이트(fomo.family, pump.fun 또는 번역 제공자) 접근 권한을 철회했습니다. 복원하기 전까지 번역은 “Failed to fetch”로 실패합니다.',
+  'perm.restore': '접근 권한 복원',
+
+  // ---------------------------------------------- popup: translate
+  'translate.toggle': '논지를 실시간 번역',
+  'translate.provider': '제공자',
+  'translate.provider.help': '번역의 출처: 내 LLM 키. 요청이 브라우저에서 키를 붙여 넣은 제공자로 바로 가며, 다른 누구도 거치지 않습니다. 비용은 그 제공자에게만 냅니다.',
+  'translate.apiKey': 'API 키',
+  'translate.apiKey.placeholder': 'API 키를 붙여 넣으세요',
+  'translate.apiKey.help': '제공자 키를 붙여 넣으세요, 나머지는 자동으로 처리됩니다: Anthropic, OpenAI, OpenRouter, Groq, DeepSeek, Gemini, Mistral, xAI, Together, Nous, Surplus. 키는 이 브라우저에만 저장되며 해당 제공자에게만 전송됩니다.',
+  'translate.detecting': '키로 제공자를 감지하는 중…',
+  'translate.noPermission': '{origin} 접근이 허용되지 않아 키를 확인할 수 없고 번역이 동작하지 않습니다',
+  'translate.pickProvider': '이 키는 어느 제공자가 발급했나요? 접두어를 여러 곳이 공유합니다. 선택하기 전까지 키는 아무 곳에도 전송되지 않습니다.',
+  'translate.pickProvider.go': '사용',
+  'provider.working': '작동 중 · {label}',
+  'provider.broken': '작동 안 함: {reason}',
+  'translate.model': '모델',
+  'translate.targetLang': '번역 언어',
+  'translate.composeLang': '내 논지를 번역할 언어',
+  'translate.compose.help': 'FOMO의 “Write a thesis” 입력란 아래에 버튼이 나타납니다. 누르면 입력란의 텍스트가 이 언어로 번역되고, 검토와 게시는 직접 합니다.\n\n비용은 논지 하나 번역과 같습니다.',
+  'translate.catalog.loading': '모델 목록 불러오는 중…',
+  'translate.catalog.empty': '모델을 불러오려면 키를 붙여 넣으세요',
+  'translate.perThousand': '{name} · 논지 1K개당 ${price}',
+  'translate.clearCache': '캐시 지우기',
+  'translate.cacheCleared': '번역 캐시를 지웠습니다',
+  'translate.test': '번역 테스트',
+  'translate.testing': '제공자에게 요청 중…',
+  'translate.test.noReason': '이유 없음',
+
+  // ------------------------------------------------- popup: errors
+  'err.noTab': 'fomo.family 또는 pump.fun 탭을 찾지 못했습니다. 현재 활성: {url}',
+  'err.unknown': '알 수 없음',
+  'err.oldTab': '탭이 이전 버전으로 실행 중입니다, 위 버튼으로 새로고침한 뒤 다시 시도하세요',
+
+  // ------------------------------------------------------- compose
+  'compose.button': '논지 번역 → {lang}',
+  'compose.empty': '먼저 논지를 작성하세요',
+  'compose.working': '번역 중…',
+  'compose.noText': '모델이 번역을 반환하지 않음',
+  'compose.done': '번역됨, 검토 후 게시하세요',
+  'compose.failed': '실패: {error}',
+
+  // ----------------------------------------------------- translate
+  'tr.rateLimited': '서비스가 대기를 요청함, 몇 초 후 번역이 계속됩니다',
+  'tr.noBridge': 'service worker 브리지가 준비되지 않음',
+
+  // ---------------------------------------------------- background
+  'bg.unknownCommand': '알 수 없는 명령: {type}',
+
+  // ------------------------------------------------- llm (own key)
+  'llm.pasteKey': '제공자 API 키를 붙여 넣으세요',
+  'llm.rejected': '키가 거부됨, 시도: {tried}',
+  'llm.rejectedHttp': '키가 거부됨 (HTTP {status})',
+  'llm.emptyCatalog': '모델 목록이 비어 있음',
+  'llm.notJson': '제공자가 JSON이 아닌 응답을 보냄 (HTTP {status}): {raw}',
+  'llm.http': '제공자가 HTTP {status}를 반환함: {detail}',
+  'llm.noKey': 'API 키가 설정되지 않음, Belingver 팝업에서 붙여 넣으세요',
+  'llm.noModel': '모델이 선택되지 않음',
+  'llm.noEndpoint': '제공자 엔드포인트가 설정되지 않음',
+  'llm.emptyText': '빈 텍스트',
+  'llm.emptyAnswer': '모델 응답이 비어 있음',
+  'llm.badFormat': '알 수 없는 본문 형식: {format}',
+  'llm.headerNoColon': '콜론이 없는 헤더: "{line}"',
+  'llm.noKeyOrNone': 'API 키가 설정되지 않음 (또는 “인증 없음”을 선택하세요)',
+
+  // ------------------------------------------------- popup: footer
+  'footer.privacy': '개인정보 처리방침',
+  'footer.source': '소스',
+  'footer.by': '제작',
+
+  // ------------------------------------------------- errors and reasons
+  'translate.toggle.help': '켜짐: 화면의 논지와 아래 두 화면이 스크롤에 따라 제공자에게 전송되고 제자리에서 교체됩니다. 꺼짐: 브라우저가 스스로 아무것도 보내지 않습니다. 작성 번역 버튼과 아래 테스트는 누르면 계속 작동합니다.',
+  'translate.removeKey': '키 삭제',
+  'translate.keyRemoved': '키가 삭제되었고 제공자 접근 권한은 Chrome에 반환되었습니다',
+  'compose.changed': '번역 중 텍스트가 바뀌어 교체하지 않았습니다',
+  'tr.err.off': '번역이 꺼져 있습니다',
+  'tr.err.no-key': 'API 키가 설정되지 않음',
+  'tr.err.empty': '빈 텍스트',
+  'tr.err.too-long': '텍스트가 논지 길이 한도를 넘습니다',
+  'tr.err.http': '제공자가 HTTP {status}로 응답했습니다',
+  'tr.err.rate-limited': '제공자가 대기를 요청합니다(요청 제한)',
+  'tr.err.local-rate': '1분에 너무 많은 번역, 대기 중',
+  'tr.err.network': '제공자에 연결할 수 없습니다',
+  'tr.err.timeout': '제공자가 제때 응답하지 않았습니다',
+  'tr.err.no-permission': 'Chrome가 제공자 접근을 허용하지 않았습니다',
+  'tr.err.bad-endpoint': '제공자 설정을 사용할 수 없습니다, 키를 다시 붙여 넣으세요',
+  'tr.err.not-json': '제공자가 번역이 아닌 것으로 응답했습니다',
+  'tr.err.too-large': '제공자가 번역보다 많은 데이터로 응답했습니다',
+  'tr.err.rejected': '키가 거부되었습니다',
+  'tr.err.generic': '번역 실패',
+  'llm.off': '확장 프로그램 팝업에서 번역이 꺼져 있습니다',
+  'llm.tooLong': '텍스트가 {max}자를 넘습니다',
+  'llm.tooLarge': '제공자가 번역보다 많은 데이터로 응답했습니다',
+  'llm.localRate': '1분에 {max}회를 넘는 번역, 대기 중',
+  'llm.badEndpoint': '제공자 설정이 제공자 표와 맞지 않습니다, 키를 다시 붙여 넣으세요',
+  'llm.network': '제공자에 연결할 수 없습니다: {detail}',
+  'llm.timeout': '제공자가 제때 응답하지 않았습니다',
+  'tr.reason.refusal': '모델이 이 번역을 거부했습니다',
+  'tr.reason.content-filter': '제공자의 콘텐츠 필터가 이를 막았습니다',
+  'tr.reason.truncated': '모델이 답하기 전에 공간을 다 썼습니다',
+  'tr.reason.empty': '모델이 번역을 반환하지 않았습니다',
+};

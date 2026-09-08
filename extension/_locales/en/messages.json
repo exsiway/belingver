@@ -1,0 +1,8 @@
+{
+  "extName": {
+    "message": "Belingver"
+  },
+  "extDesc": {
+    "message": "Translates theses on fomo.family and pump.fun in place, with your own LLM key."
+  }
+}

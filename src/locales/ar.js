@@ -1,0 +1,108 @@
+// العربية.
+export default {
+  // ------------------------------------------------- popup: chrome
+  'reload.banner': 'التبويب يعمل بإصدار قديم من الإضافة.',
+  'reload.button': 'إعادة تحميل التبويب',
+  'reload.working': 'جارٍ إعادة التحميل…',
+  'perm.banner': 'سحب Chrome من الإضافة صلاحية الوصول إلى موقع تحتاجه (fomo.family أو pump.fun أو مزوّد الترجمة). ستفشل الترجمات بخطأ “Failed to fetch” حتى تُستعاد.',
+  'perm.restore': 'استعادة الوصول',
+
+  // ---------------------------------------------- popup: translate
+  'translate.toggle': 'ترجمة الأطروحات فورًا',
+  'translate.provider': 'المزوّد',
+  'translate.provider.help': 'من أين تأتي الترجمات: مفتاح LLM الخاص بك. تذهب الطلبات مباشرة من متصفحك إلى المزوّد الذي لصقت مفتاحه؛ لا يمر شيء عبر أي طرف آخر. تدفع لذلك المزوّد فقط.',
+  'translate.apiKey': 'مفتاح API',
+  'translate.apiKey.placeholder': 'الصق مفتاح API',
+  'translate.apiKey.help': 'الصق مفتاح المزوّد, والباقي يُحدَّد تلقائيًا: Anthropic وOpenAI وOpenRouter وGroq وDeepSeek وGemini وMistral وxAI وTogether وNous وSurplus. يبقى المفتاح في هذا المتصفح فقط ولا يُرسل إلا إلى ذلك المزوّد.',
+  'translate.detecting': 'جارٍ اكتشاف المزوّد من المفتاح…',
+  'translate.noPermission': 'لم يُمنح الوصول إلى {origin}، بدونه لا يمكن فحص المفتاح ولا تعمل الترجمة',
+  'translate.pickProvider': 'أي مزوّد أصدر هذا المفتاح؟ بادئته مشتركة بين عدة مزوّدين؛ لا يُرسَل المفتاح إلى أحد حتى تحدّد.',
+  'translate.pickProvider.go': 'استخدام',
+  'provider.working': 'يعمل · {label}',
+  'provider.broken': 'لا يعمل: {reason}',
+  'translate.model': 'النموذج',
+  'translate.targetLang': 'الترجمة إلى',
+  'translate.composeLang': 'ترجمة أطروحاتي إلى',
+  'translate.compose.help': 'يظهر زر تحت حقل “Write a thesis” في FOMO. عند الضغط عليه يُترجم نص الحقل إلى هذه اللغة؛ تراجعه وتنشره بنفسك.\n\nالتكلفة مثل ترجمة أطروحة واحدة.',
+  'translate.catalog.loading': 'جارٍ تحميل القائمة…',
+  'translate.catalog.empty': 'الصق مفتاحًا لتحميل النماذج',
+  'translate.perThousand': '{name} · ${price} لكل 1K أطروحة',
+  'translate.clearCache': 'مسح الذاكرة المؤقتة',
+  'translate.cacheCleared': 'تم مسح ذاكرة الترجمة المؤقتة',
+  'translate.test': 'اختبار الترجمة',
+  'translate.testing': 'جارٍ سؤال المزوّد…',
+  'translate.test.noReason': 'لم يُذكر سبب',
+
+  // ------------------------------------------------- popup: errors
+  'err.noTab': 'لم يُعثر على تبويب fomo.family أو pump.fun. النشط الآن: {url}',
+  'err.unknown': 'غير معروف',
+  'err.oldTab': 'التبويب يعمل بإصدار قديم من الإضافة, أعد تحميله بالزر أعلاه وأعد المحاولة',
+
+  // ------------------------------------------------------- compose
+  'compose.button': 'ترجمة الأطروحة → {lang}',
+  'compose.empty': 'اكتب أطروحة أولًا',
+  'compose.working': 'جارٍ الترجمة…',
+  'compose.noText': 'لم يُرجع النموذج ترجمة',
+  'compose.done': 'تمت الترجمة, راجع وانشر',
+  'compose.failed': 'فشل: {error}',
+
+  // ----------------------------------------------------- translate
+  'tr.rateLimited': 'تطلب الخدمة الانتظار, تستأنف الترجمات خلال ثوانٍ',
+  'tr.noBridge': 'الجسر إلى service worker غير جاهز',
+
+  // ---------------------------------------------------- background
+  'bg.unknownCommand': 'أمر غير معروف: {type}',
+
+  // ------------------------------------------------- llm (own key)
+  'llm.pasteKey': 'الصق مفتاح API للمزوّد',
+  'llm.rejected': 'المفتاح مرفوض, جرّبنا {tried}',
+  'llm.rejectedHttp': 'المفتاح مرفوض (HTTP {status})',
+  'llm.emptyCatalog': 'القائمة فارغة',
+  'llm.notJson': 'أجاب المزوّد بغير JSON (HTTP {status}): {raw}',
+  'llm.http': 'أعاد المزوّد HTTP {status}: {detail}',
+  'llm.noKey': 'لم يُضبط مفتاح API, الصقه في نافذة Belingver',
+  'llm.noModel': 'لم يُختر نموذج',
+  'llm.noEndpoint': 'لم يُضبط عنوان المزوّد',
+  'llm.emptyText': 'نص فارغ',
+  'llm.emptyAnswer': 'إجابة النموذج فارغة',
+  'llm.badFormat': 'صيغة جسم غير معروفة: {format}',
+  'llm.headerNoColon': 'ترويسة بلا نقطتين: "{line}"',
+  'llm.noKeyOrNone': 'لم يُضبط مفتاح API (أو اختر “بدون تفويض”)',
+
+  // ------------------------------------------------- popup: footer
+  'footer.privacy': 'سياسة الخصوصية',
+  'footer.source': 'الشيفرة المصدرية',
+  'footer.by': 'من',
+
+  // ------------------------------------------------- errors and reasons
+  'translate.toggle.help': 'مفعّل: تُرسل الأطروحات الظاهرة على الشاشة والشاشتان اللتان تحتها إلى مزوّدك أثناء التمرير وتُستبدل في مكانها. معطّل: لا يغادر المتصفح شيء من تلقاء نفسه؛ زر ترجمة أطروحتك والاختبار أدناه يعملان عند الضغط عليهما.',
+  'translate.removeKey': 'حذف المفتاح',
+  'translate.keyRemoved': 'حُذف المفتاح وأُعيدت صلاحية الوصول إلى المزوّد إلى Chrome',
+  'compose.changed': 'تغيّر النص أثناء الترجمة, لم يُستبدل شيء',
+  'tr.err.off': 'الترجمة معطّلة',
+  'tr.err.no-key': 'لم يُضبط مفتاح API',
+  'tr.err.empty': 'نص فارغ',
+  'tr.err.too-long': 'النص أطول مما يمكن أن تكون عليه أطروحة',
+  'tr.err.http': 'أجاب المزوّد بـ HTTP {status}',
+  'tr.err.rate-limited': 'يطلب المزوّد الانتظار (حد الطلبات)',
+  'tr.err.local-rate': 'ترجمات كثيرة جدًا في دقيقة, ننتظر',
+  'tr.err.network': 'تعذّر الوصول إلى المزوّد',
+  'tr.err.timeout': 'لم يُجب المزوّد في الوقت المناسب',
+  'tr.err.no-permission': 'لم يمنح Chrome صلاحية الوصول إلى المزوّد',
+  'tr.err.bad-endpoint': 'إعدادات المزوّد غير صالحة, الصق المفتاح من جديد',
+  'tr.err.not-json': 'أجاب المزوّد بشيء غير الترجمة',
+  'tr.err.too-large': 'أجاب المزوّد بأكثر من ترجمة',
+  'tr.err.rejected': 'لم يُقبل المفتاح',
+  'tr.err.generic': 'فشلت الترجمة',
+  'llm.off': 'الترجمة معطّلة في نافذة الإضافة',
+  'llm.tooLong': 'النص أطول من {max} حرفًا',
+  'llm.tooLarge': 'أجاب المزوّد ببيانات أكثر من ترجمة',
+  'llm.localRate': 'أكثر من {max} ترجمة في دقيقة, ننتظر',
+  'llm.badEndpoint': 'إعدادات المزوّد لا تطابق جدول المزوّدين, الصق المفتاح من جديد',
+  'llm.network': 'تعذّر الوصول إلى المزوّد: {detail}',
+  'llm.timeout': 'لم يُجب المزوّد في الوقت المناسب',
+  'tr.reason.refusal': 'رفض النموذج ترجمة هذا',
+  'tr.reason.content-filter': 'أوقف مرشّح المحتوى لدى المزوّد هذا',
+  'tr.reason.truncated': 'نفد المجال لدى النموذج قبل الإجابة',
+  'tr.reason.empty': 'لم يُعد النموذج ترجمة',
+};

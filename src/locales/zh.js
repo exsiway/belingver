@@ -1,0 +1,108 @@
+// 中文。
+export default {
+  // ------------------------------------------------- popup: chrome
+  'reload.banner': '标签页正在运行旧版本的扩展。',
+  'reload.button': '重新加载标签页',
+  'reload.working': '正在重新加载…',
+  'perm.banner': 'Chrome 撤回了扩展对所需站点（fomo.family、pump.fun 或你的翻译提供方）的访问权限。在恢复之前，翻译会报“Failed to fetch”。',
+  'perm.restore': '恢复访问',
+
+  // ---------------------------------------------- popup: translate
+  'translate.toggle': '实时翻译观点',
+  'translate.provider': '服务商',
+  'translate.provider.help': '翻译的来源：你自己的 LLM 密钥。请求直接从你的浏览器发到你粘贴了密钥的服务商，不经过任何第三方。你只向该服务商付费。',
+  'translate.apiKey': 'API 密钥',
+  'translate.apiKey.placeholder': '粘贴 API 密钥',
+  'translate.apiKey.help': '粘贴服务商密钥，其余自动完成：Anthropic、OpenAI、OpenRouter、Groq、DeepSeek、Gemini、Mistral、xAI、Together、Nous、Surplus。密钥仅保存在此浏览器中，只发送给该服务商。',
+  'translate.detecting': '正在根据密钥识别服务商…',
+  'translate.noPermission': '未授予对 {origin} 的访问权限，无法检查密钥，翻译不可用',
+  'translate.pickProvider': '这个密钥由哪个服务商颁发？其前缀被多家共用；在你选择之前，密钥不会发送给任何人。',
+  'translate.pickProvider.go': '使用',
+  'provider.working': '正常 · {label}',
+  'provider.broken': '不工作：{reason}',
+  'translate.model': '模型',
+  'translate.targetLang': '翻译为',
+  'translate.composeLang': '我的观点翻译为',
+  'translate.compose.help': 'FOMO 的“Write a thesis”输入框下会出现一个按钮。点击后，框内文本会翻译成这种语言；由你检查并发布。\n\n费用与翻译一条观点相同。',
+  'translate.catalog.loading': '正在加载模型列表…',
+  'translate.catalog.empty': '粘贴密钥以加载模型',
+  'translate.perThousand': '{name} · 每 1K 条观点 ${price}',
+  'translate.clearCache': '清除缓存',
+  'translate.cacheCleared': '翻译缓存已清除',
+  'translate.test': '测试翻译',
+  'translate.testing': '正在询问服务商…',
+  'translate.test.noReason': '未给出原因',
+
+  // ------------------------------------------------- popup: errors
+  'err.noTab': '未找到 fomo.family 或 pump.fun 标签页。当前活动：{url}',
+  'err.unknown': '未知',
+  'err.oldTab': '标签页运行的是旧版扩展，请用上方按钮重新加载后重试',
+
+  // ------------------------------------------------------- compose
+  'compose.button': '翻译观点 → {lang}',
+  'compose.empty': '请先写下观点',
+  'compose.working': '翻译中…',
+  'compose.noText': '模型未返回翻译',
+  'compose.done': '已翻译，请检查后发布',
+  'compose.failed': '失败：{error}',
+
+  // ----------------------------------------------------- translate
+  'tr.rateLimited': '服务要求稍等，几秒后继续翻译',
+  'tr.noBridge': '到 service worker 的桥接未建立',
+
+  // ---------------------------------------------------- background
+  'bg.unknownCommand': '未知命令：{type}',
+
+  // ------------------------------------------------- llm (own key)
+  'llm.pasteKey': '请粘贴服务商 API 密钥',
+  'llm.rejected': '密钥未被接受，已尝试 {tried}',
+  'llm.rejectedHttp': '密钥未被接受（HTTP {status}）',
+  'llm.emptyCatalog': '模型列表为空',
+  'llm.notJson': '服务商返回的不是 JSON（HTTP {status}）：{raw}',
+  'llm.http': '服务商返回 HTTP {status}：{detail}',
+  'llm.noKey': '未设置 API 密钥，请在 Belingver 弹窗中粘贴',
+  'llm.noModel': '未选择模型',
+  'llm.noEndpoint': '未设置服务商端点',
+  'llm.emptyText': '文本为空',
+  'llm.emptyAnswer': '模型回复为空',
+  'llm.badFormat': '未知的请求体格式：{format}',
+  'llm.headerNoColon': '请求头缺少冒号："{line}"',
+  'llm.noKeyOrNone': '未设置 API 密钥（或选择“无授权”）',
+
+  // ------------------------------------------------- popup: footer
+  'footer.privacy': '隐私政策',
+  'footer.source': '源码',
+  'footer.by': '作者',
+
+  // ------------------------------------------------- errors and reasons
+  'translate.toggle.help': '开启：屏幕上的观点以及下方两屏会随滚动发送给你的提供方并就地替换。关闭：浏览器不会自行发出任何内容；下方的撰写翻译按钮和测试仍可按下使用。',
+  'translate.removeKey': '删除密钥',
+  'translate.keyRemoved': '密钥已删除，对提供方的访问已交还 Chrome',
+  'compose.changed': '翻译期间文本已改变，未替换',
+  'tr.err.off': '翻译已关闭',
+  'tr.err.no-key': '未设置 API 密钥',
+  'tr.err.empty': '文本为空',
+  'tr.err.too-long': '文本长度超过观点上限',
+  'tr.err.http': '提供方返回 HTTP {status}',
+  'tr.err.rate-limited': '提供方要求稍候（速率限制）',
+  'tr.err.local-rate': '一分钟内翻译过多，等待中',
+  'tr.err.network': '无法连接提供方',
+  'tr.err.timeout': '提供方未及时响应',
+  'tr.err.no-permission': 'Chrome 未授予对提供方的访问权限',
+  'tr.err.bad-endpoint': '提供方设置不可用，请重新粘贴密钥',
+  'tr.err.not-json': '提供方返回的不是翻译',
+  'tr.err.too-large': '提供方返回的数据超出翻译范围',
+  'tr.err.rejected': '密钥未被接受',
+  'tr.err.generic': '翻译失败',
+  'llm.off': '翻译已在扩展弹窗中关闭',
+  'llm.tooLong': '文本超过 {max} 个字符',
+  'llm.tooLarge': '提供方返回的数据超出翻译范围',
+  'llm.localRate': '一分钟内超过 {max} 次翻译，等待中',
+  'llm.badEndpoint': '提供方设置与提供方表不一致，请重新粘贴密钥',
+  'llm.network': '无法连接提供方：{detail}',
+  'llm.timeout': '提供方未及时响应',
+  'tr.reason.refusal': '模型拒绝翻译此内容',
+  'tr.reason.content-filter': '提供方的内容过滤器拦截了此内容',
+  'tr.reason.truncated': '模型在作答前用尽了篇幅',
+  'tr.reason.empty': '模型未返回翻译',
+};

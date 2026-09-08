@@ -1,0 +1,63 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extName__",
+  "version": "0.2.4",
+  "description": "__MSG_extDesc__",
+  "default_locale": "en",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "//host_permissions": "LLM providers are NOT listed under host_permissions on purpose: access to the one provider whose key is pasted is requested at that moment (popup.js detectProvider), from the optional list below, which names exactly the providers of src/shared/llm.js and nothing wider. The extension holds no standing access to any provider.",
+  "host_permissions": [
+    "https://fomo.family/*",
+    "https://*.fomo.family/*",
+    "https://pump.fun/*",
+    "https://*.pump.fun/*"
+  ],
+  "optional_host_permissions": [
+    "https://api.anthropic.com/*",
+    "https://api.deepseek.com/*",
+    "https://api.groq.com/*",
+    "https://api.mistral.ai/*",
+    "https://api.openai.com/*",
+    "https://api.surplusintelligence.ai/*",
+    "https://api.together.xyz/*",
+    "https://api.x.ai/*",
+    "https://generativelanguage.googleapis.com/*",
+    "https://inference-api.nousresearch.com/*",
+    "https://openrouter.ai/*"
+  ],
+  "background": {
+    "service_worker": "dist/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://fomo.family/*",
+        "https://*.fomo.family/*",
+        "https://pump.fun/*",
+        "https://*.pump.fun/*"
+      ],
+      "js": [
+        "dist/content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_popup": "dist/popup.html",
+    "default_title": "Belingver",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png"
+    }
+  }
+}

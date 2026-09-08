@@ -1,0 +1,108 @@
+// हिन्दी।
+export default {
+  // ------------------------------------------------- popup: chrome
+  'reload.banner': 'टैब एक्सटेंशन का पुराना संस्करण चला रहा है।',
+  'reload.button': 'टैब रीलोड करें',
+  'reload.working': 'रीलोड हो रहा है…',
+  'perm.banner': 'Chrome ने एक्सटेंशन से एक ज़रूरी साइट (fomo.family, pump.fun या आपका अनुवाद प्रदाता) की पहुँच वापस ले ली है। बहाल होने तक अनुवाद “Failed to fetch” के साथ विफल होंगे।',
+  'perm.restore': 'पहुँच बहाल करें',
+
+  // ---------------------------------------------- popup: translate
+  'translate.toggle': 'थीसिस का तुरंत अनुवाद',
+  'translate.provider': 'प्रोवाइडर',
+  'translate.provider.help': 'अनुवाद कहाँ से आते हैं: आपकी अपनी LLM कुंजी। अनुरोध सीधे आपके ब्राउज़र से उस प्रोवाइडर को जाते हैं जिसकी कुंजी आपने चिपकाई है; बीच में कोई नहीं। भुगतान सिर्फ़ उसी प्रोवाइडर को।',
+  'translate.apiKey': 'API कुंजी',
+  'translate.apiKey.placeholder': 'API कुंजी चिपकाएँ',
+  'translate.apiKey.help': 'प्रोवाइडर की कुंजी चिपकाएँ, बाकी अपने आप हो जाएगा: Anthropic, OpenAI, OpenRouter, Groq, DeepSeek, Gemini, Mistral, xAI, Together, Nous, Surplus। कुंजी सिर्फ़ इस ब्राउज़र में रहती है और सिर्फ़ उसी प्रोवाइडर को भेजी जाती है।',
+  'translate.detecting': 'कुंजी से प्रोवाइडर पहचाना जा रहा है…',
+  'translate.noPermission': '{origin} की अनुमति नहीं दी गई, इसके बिना कुंजी जाँची नहीं जा सकती और अनुवाद नहीं चलता',
+  'translate.pickProvider': 'यह कुंजी किस प्रदाता ने जारी की? इसका उपसर्ग कई साझा करते हैं; आपके बताने तक कुंजी किसी को नहीं भेजी जाती।',
+  'translate.pickProvider.go': 'इस्तेमाल करें',
+  'provider.working': 'काम कर रहा है · {label}',
+  'provider.broken': 'काम नहीं कर रहा: {reason}',
+  'translate.model': 'मॉडल',
+  'translate.targetLang': 'इस भाषा में अनुवाद',
+  'translate.composeLang': 'मेरी थीसिस का अनुवाद इसमें',
+  'translate.compose.help': 'FOMO में “Write a thesis” फ़ील्ड के नीचे एक बटन दिखता है। दबाने पर फ़ील्ड का टेक्स्ट इस भाषा में अनुवादित होता है; जाँच और पोस्ट आप खुद करते हैं।\n\nलागत एक थीसिस के अनुवाद जितनी।',
+  'translate.catalog.loading': 'कैटलॉग लोड हो रहा है…',
+  'translate.catalog.empty': 'मॉडल लोड करने के लिए कुंजी चिपकाएँ',
+  'translate.perThousand': '{name} · 1K थीसिस के लिए ${price}',
+  'translate.clearCache': 'कैश साफ़ करें',
+  'translate.cacheCleared': 'अनुवाद कैश साफ़ हो गया',
+  'translate.test': 'अनुवाद जाँचें',
+  'translate.testing': 'प्रोवाइडर से पूछ रहे हैं…',
+  'translate.test.noReason': 'कारण नहीं बताया',
+
+  // ------------------------------------------------- popup: errors
+  'err.noTab': 'fomo.family या pump.fun का टैब नहीं मिला। अभी सक्रिय: {url}',
+  'err.unknown': 'अज्ञात',
+  'err.oldTab': 'टैब पुराना एक्सटेंशन चला रहा है, ऊपर के बटन से रीलोड करके फिर कोशिश करें',
+
+  // ------------------------------------------------------- compose
+  'compose.button': 'थीसिस अनुवाद → {lang}',
+  'compose.empty': 'पहले थीसिस लिखें',
+  'compose.working': 'अनुवाद हो रहा है…',
+  'compose.noText': 'मॉडल ने अनुवाद नहीं लौटाया',
+  'compose.done': 'अनुवाद हुआ, जाँचें और पोस्ट करें',
+  'compose.failed': 'असफल: {error}',
+
+  // ----------------------------------------------------- translate
+  'tr.rateLimited': 'सर्विस रुकने को कह रही है, कुछ सेकंड में अनुवाद फिर शुरू होंगे',
+  'tr.noBridge': 'service worker से पुल तैयार नहीं',
+
+  // ---------------------------------------------------- background
+  'bg.unknownCommand': 'अज्ञात कमांड: {type}',
+
+  // ------------------------------------------------- llm (own key)
+  'llm.pasteKey': 'प्रोवाइडर की API कुंजी चिपकाएँ',
+  'llm.rejected': 'कुंजी स्वीकार नहीं, कोशिश की: {tried}',
+  'llm.rejectedHttp': 'कुंजी स्वीकार नहीं (HTTP {status})',
+  'llm.emptyCatalog': 'कैटलॉग खाली है',
+  'llm.notJson': 'प्रोवाइडर ने JSON नहीं दिया (HTTP {status}): {raw}',
+  'llm.http': 'प्रोवाइडर ने HTTP {status} दिया: {detail}',
+  'llm.noKey': 'API कुंजी सेट नहीं, Belingver पॉपअप में चिपकाएँ',
+  'llm.noModel': 'मॉडल नहीं चुना गया',
+  'llm.noEndpoint': 'प्रोवाइडर एंडपॉइंट सेट नहीं',
+  'llm.emptyText': 'खाली टेक्स्ट',
+  'llm.emptyAnswer': 'मॉडल का जवाब खाली',
+  'llm.badFormat': 'अज्ञात बॉडी फ़ॉर्मैट: {format}',
+  'llm.headerNoColon': 'हेडर में कोलन नहीं: "{line}"',
+  'llm.noKeyOrNone': 'API कुंजी सेट नहीं (या “बिना auth” चुनें)',
+
+  // ------------------------------------------------- popup: footer
+  'footer.privacy': 'गोपनीयता नीति',
+  'footer.source': 'स्रोत कोड',
+  'footer.by': 'द्वारा',
+
+  // ------------------------------------------------- errors and reasons
+  'translate.toggle.help': 'चालू: स्क्रीन पर मौजूद थीसिस और नीचे की दो स्क्रीन स्क्रॉल के साथ आपके प्रदाता को भेजी जाती हैं और वहीं बदल दी जाती हैं। बंद: ब्राउज़र से अपने आप कुछ नहीं जाता; नीचे का थीसिस अनुवाद बटन और परीक्षण दबाने पर काम करते रहते हैं।',
+  'translate.removeKey': 'कुंजी हटाएँ',
+  'translate.keyRemoved': 'कुंजी हटाई गई, प्रदाता की पहुँच Chrome को लौटा दी गई',
+  'compose.changed': 'अनुवाद के दौरान पाठ बदल गया, कुछ नहीं बदला गया',
+  'tr.err.off': 'अनुवाद बंद है',
+  'tr.err.no-key': 'API कुंजी सेट नहीं',
+  'tr.err.empty': 'खाली पाठ',
+  'tr.err.too-long': 'पाठ थीसिस की सीमा से लंबा है',
+  'tr.err.http': 'प्रदाता ने HTTP {status} लौटाया',
+  'tr.err.rate-limited': 'प्रदाता प्रतीक्षा करने को कहता है (दर सीमा)',
+  'tr.err.local-rate': 'एक मिनट में बहुत अधिक अनुवाद, प्रतीक्षा',
+  'tr.err.network': 'प्रदाता तक पहुँच नहीं हो सकी',
+  'tr.err.timeout': 'प्रदाता ने समय पर उत्तर नहीं दिया',
+  'tr.err.no-permission': 'Chrome ने प्रदाता की पहुँच नहीं दी',
+  'tr.err.bad-endpoint': 'प्रदाता सेटिंग उपयोग योग्य नहीं, कुंजी फिर चिपकाएँ',
+  'tr.err.not-json': 'प्रदाता ने अनुवाद के बजाय कुछ और लौटाया',
+  'tr.err.too-large': 'प्रदाता ने अनुवाद से अधिक डेटा लौटाया',
+  'tr.err.rejected': 'कुंजी स्वीकार नहीं हुई',
+  'tr.err.generic': 'अनुवाद विफल',
+  'llm.off': 'एक्सटेंशन पॉपअप में अनुवाद बंद है',
+  'llm.tooLong': 'पाठ {max} अक्षरों से लंबा है',
+  'llm.tooLarge': 'प्रदाता ने अनुवाद से अधिक डेटा लौटाया',
+  'llm.localRate': 'एक मिनट में {max} से अधिक अनुवाद, प्रतीक्षा',
+  'llm.badEndpoint': 'प्रदाता सेटिंग प्रदाता तालिका से मेल नहीं खाती, कुंजी फिर चिपकाएँ',
+  'llm.network': 'प्रदाता तक पहुँच नहीं हो सकी: {detail}',
+  'llm.timeout': 'प्रदाता ने समय पर उत्तर नहीं दिया',
+  'tr.reason.refusal': 'मॉडल ने इसका अनुवाद करने से मना किया',
+  'tr.reason.content-filter': 'प्रदाता के कंटेंट फ़िल्टर ने इसे रोका',
+  'tr.reason.truncated': 'उत्तर देने से पहले मॉडल की जगह खत्म हो गई',
+  'tr.reason.empty': 'मॉडल ने अनुवाद नहीं लौटाया',
+};
