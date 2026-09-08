@@ -133,18 +133,17 @@ its issuer (`sk-ant-`, `sk-or-`, `gsk_`, `xai-`, `AIza`, `inf_`) is checked
 with that issuer alone. A key whose prefix several providers share (`sk-…`) is
 sent to nobody until you name the issuer in the popup.
 
-**Where to get a key.** Any of the eleven works; three are marketplaces that
-sell many models under one key, pay-as-you-go, with prices the popup shows
-per thousand theses:
+**Where to get a key.** Any of the eleven works. Three of them sell many
+models under one key, pay-as-you-go; the popup shows their prices per
+thousand theses. Provider sites, for getting a key:
 
-- [OpenRouter](https://openrouter.ai/keys): hundreds of models, one key
-  (`sk-or-…`), card or crypto top-up.
-- [Nous Research](https://portal.nousresearch.com/): the Nous inference
-  portal, open models at low prices.
-- [Surplus Intelligence](https://www.surplusintelligence.ai/): an open market
-  for inference on Base, the cheapest offer for each model (`inf_…` keys).
+- [OpenRouter](https://openrouter.ai/keys), keys `sk-or-…`
+- [Nous Research](https://portal.nousresearch.com/), the inference portal
+- [Surplus Intelligence](https://www.surplusintelligence.ai/), keys `inf_…`
 
-A few dollars translate thousands of theses on a small model.
+These are third parties. Belingver sends them your key and the text it
+translates, and nothing here vouches for how they handle either; read their
+terms as you would for any API you pay for.
 
 Adding a provider is one entry in `PROVIDERS` in `src/shared/llm.js` and, if
 its prefix is distinctive, one line in `candidatesForKey`.
