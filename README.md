@@ -163,8 +163,9 @@ npm run pack:store
 
 ## Origin
 
-Belingver is the translation half of [limil](https://github.com/exsiway/limil),
-split into its own extension so that it stays a single-purpose tool.
+Belingver began as the translation half of limil, a limit-order extension for
+FOMO by the same author, and became its own extension so that each does one
+thing.
 
 ## License
 
