@@ -89,7 +89,7 @@ data to determine creditworthiness or for lending.
 
 ## Privacy policy URL
 
-https://github.com/exsiway/belingver/blob/main/docs/PRIVACY.md
+https://exsiway.github.io/belingver/PRIVACY.html
 
 ## Trademarks and affiliation
 
