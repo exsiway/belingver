@@ -3,7 +3,7 @@
   "version": "0.2.4",
   "private": true,
   "type": "module",
-  "description": "Live thesis translation for FOMO (fomo.family) with your own LLM key. Chrome extension, runs entirely in your browser.",
+  "description": "Live thesis translation for FOMO (fomo.family) and pump.fun with your own LLM key. Chrome extension.",
   "keywords": [
     "chrome-extension",
     "fomo",
